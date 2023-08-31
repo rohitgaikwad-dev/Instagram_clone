@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+}
+
+#screen {
+  width: 23%;
+  height: 70%;
+  border: 2px solid #000;
+  border-radius: 10px;
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.logo {
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+}
+
+.logo > h1 {
+  padding: 0.2rem 1.5rem;
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+}
+
+.top {
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+.storys {
+  width: 100%;
+  height: 100%;
+  padding: 0rem 0.5rem;
+  display: block;
+  overflow-y: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
+.storys::-webkit-scrollbar {
+  display: none;
+}
+
+.story {
+  width: 90px;
+  height: 90px;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right top, #edc850, #f83909, #fc00fc);
+}
+
+.story img {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  border-radius: 50%;
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+}
+
+.bottom {
+  width: 100%;
+  height: calc(100% - 150px);
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.content > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
