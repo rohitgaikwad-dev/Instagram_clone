@@ -11,135 +11,177 @@ body {
 }
 
 #main {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #111;
+  background-color: #f1f1f1;
 }
 
-#screen {
-  width: 23%;
-  height: 70%;
-  border: 2px solid #000;
+.screen {
+  width: 435px;
+  height: 650px;
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
+  filter: drop-shadow(10px 10px 20px #717171);
   background-color: #fff;
+  position: relative;
+}
+
+.fullscreen {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+  justify-content: space-between;
+  background-size: cover;
+  background-position: center;
+  background-color: #b0b0b0;
+  padding: 2rem;
+  z-index: 2;
+}
+
+.progress {
+  width: 80%;
+  height: 5px;
+  border-radius: 50px;
+  position: relative;
   overflow: hidden;
+  opacity: 0.8;
+  background-color: #dadada;
+}
+
+.growth {
+  width: 0%;
+  height: 5px;
+  position: absolute;
+  background-color: #fffefe;
+}
+
+.close > i {
+  font-size: 2rem;
+  color: #dadada;
+  position: absolute;
+  top: 3%;
+  right: 5%;
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .logo {
   width: 100%;
-  height: 50px;
-  background-color: #fff;
+  height: 60px;
+  padding: 15px 25px;
 }
 
 .logo > h1 {
-  padding: 0.2rem 1.5rem;
   font-family: "Dancing Script", cursive;
-  font-weight: 700;
 }
 
-.top {
+.stories {
   width: 100%;
-  height: 100px;
-}
-
-.storys {
-  width: 100%;
-  height: 100%;
-  padding: 0rem 0.5rem;
-  display: block;
-  overflow-y: hidden;
-  overflow-x: auto;
+  height: 120px;
   white-space: nowrap;
-  scroll-behavior: smooth;
+  padding: 5px;
+  overflow-y: none;
+  overflow-x: auto;
+  border-bottom: 1px solid #dadada;
 }
 
-.storys::-webkit-scrollbar {
+.stories::-webkit-scrollbar {
   display: none;
 }
 
 .story {
-  width: 90px;
-  height: 90px;
-  display: inline-block;
-  border-radius: 50%;
+  width: 100px;
+  height: 100px;
   position: relative;
+  border-radius: 50%;
+  margin-right: 8px;
+  display: inline-block;
   overflow: hidden;
-  background: linear-gradient(to right top, #edc850, #f83909, #fc00fc);
+  cursor: pointer;
+  background: linear-gradient(to right top, #ffcc00, #f72424, #ca01ca);
+  padding: 5px;
 }
 
-.story img {
+.story > img {
   width: 100%;
   height: 100%;
-  padding: 5px;
   border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.post {
+  width: 100%;
+  height: calc(100% - 180px);
+}
+
+.top_post {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  padding: 0px 15px;
+  align-items: center;
+}
+
+.post_dp {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-image: url(https://pbs.twimg.com/profile_images/1009469376490192896/hW_ZFLHm_400x400.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color: #717171;
+}
+
+.top_post > h3 {
+  font-size: 1rem;
+  font-family: poppins;
+  font-weight: 400;
+}
+
+.post_img {
+  width: 100%;
+  height: calc(100% - 120px);
+  position: relative;
+  overflow: hidden;
+  border-top: #dadada;
+  background-color: #717171;
+}
+
+.post_img img {
+  width: 100%;
+  height: 100%;
   position: absolute;
   object-fit: cover;
   object-position: center;
   cursor: pointer;
 }
 
-.profile-story {
-  width: 600px;
-  height: 600px;
-  position: relative;
-  background-color: red;
-  z-index: 5;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-.bottom {
-  width: 100%;
-  height: calc(100% - 150px);
-}
-
-.content {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-.content > img {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  object-fit: cover;
-  object-position: center;
-  cursor: pointer;
-}
-
-.content > i {
+.post_img > i {
+  font-size: 5rem;
+  color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 7rem;
-  color: #fff;
   opacity: 0;
   z-index: 5;
 }
 
-.c_btm {
+.btm_post {
   width: 100%;
-  height: 50px;
+  height: 60px;
   display: flex;
-  justify-content: start;
   align-items: center;
-  background-color: #fff;
 }
 
-.c_btm > i {
+.btm_post i {
   font-size: 2rem;
+  margin: 5px;
   cursor: pointer;
 }
 
