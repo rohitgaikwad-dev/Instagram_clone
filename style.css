@@ -170,6 +170,7 @@ body {
   transform: translate(-50%, -50%);
   opacity: 0;
   z-index: 5;
+  cursor: pointer;
 }
 
 .btm_post {
@@ -185,3 +186,11 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 450px) {
+  .screen {
+    width: 100vw;
+    height: 100vh;
+    margin-top: 1.5rem;
+    filter: none;
+  }
+}
